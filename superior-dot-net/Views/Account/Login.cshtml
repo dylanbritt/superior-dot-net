@@ -1,0 +1,74 @@
+﻿@model Superior.Domain.Models.User
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .login-wrapper .validation-error {
+        color: red;
+    }
+
+    .login-wrapper {
+        min-height: 2000px;
+    }
+</style>
+
+<div class="login-wrapper">
+
+    @using (Html.BeginForm("Login", "Account", null, FormMethod.Post, new { id = "frmLoginSubmit" }))
+    {
+        <h3>Login</h3>
+
+        if (ViewBag.Error != null)
+        {
+            <span class="error">@ViewBag.Error</span>
+        }
+
+        <label for="UserName">Username:</label>
+        @Html.TextBoxFor(x => x.UserName)
+        @Html.ValidationMessageFor(x => x.UserName, null, new { style = "color:red" })
+
+        <label for="UserCredential_Password">Password:</label>
+        @Html.PasswordFor(x => x.UserCredential.Password)
+
+        <input type="submit" value="login" />
+    }
+
+</div>
+
+@section Scripts {
+
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $('#frmLoginSubmit').validate({
+                errorElement: 'span',
+                errorClass: 'validation-error',
+                rules: {
+                    'UserName': {
+                        required: true,
+                        email: true,
+                        maxlength: 64
+                    },
+                    'UserCredential.Password': {
+                        required: true,
+                        maxlength: 64,
+                        regex: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).{8,}$/,
+                    }
+                },
+                messages: {
+                    'UserName': { },
+                    'UserCredential.Password': {
+                        regex: "Bad password (at least one lower char, upper char, digit, and symbol."
+                    }
+                }
+            });
+        });
+
+        $.validator.addMethod("regex", function (value, element, regexpr) {
+            return regexpr.test(value);
+        }, "Please enter a valid pasword.");
+    </script>
+}

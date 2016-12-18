@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "superior-dot-net", "superior-dot-net\superior-dot-net.csproj", "{CD842D39-BEE3-44B9-B069-72FBB06590D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Superior.DataAccess", "Superior.DataAccess\Superior.DataAccess.csproj", "{079223EB-0D1B-4453-B859-0E66F0C4B0C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Superior.Domain", "Superior.Domain\Superior.Domain.csproj", "{8C383A40-5A2B-42D2-8913-77D042333FE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_console", "_console\_console.csproj", "{37BBECBE-A7F2-4E69-BE5B-25DEF9674203}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Superior.BusinessLogic", "Superior.BusinessLogic\Superior.BusinessLogic.csproj", "{230431BC-6CD8-42A3-8611-D26D92372C52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Superior.Utility", "Superior.Utility\Superior.Utility.csproj", "{FB23BF12-219F-4A5D-B2F5-F1B4E94B23C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7C707642-3BEE-4A39-81B7-4210D97FEAD5}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD842D39-BEE3-44B9-B069-72FBB06590D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD842D39-BEE3-44B9-B069-72FBB06590D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD842D39-BEE3-44B9-B069-72FBB06590D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD842D39-BEE3-44B9-B069-72FBB06590D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{079223EB-0D1B-4453-B859-0E66F0C4B0C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{079223EB-0D1B-4453-B859-0E66F0C4B0C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{079223EB-0D1B-4453-B859-0E66F0C4B0C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{079223EB-0D1B-4453-B859-0E66F0C4B0C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C383A40-5A2B-42D2-8913-77D042333FE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C383A40-5A2B-42D2-8913-77D042333FE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C383A40-5A2B-42D2-8913-77D042333FE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C383A40-5A2B-42D2-8913-77D042333FE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37BBECBE-A7F2-4E69-BE5B-25DEF9674203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37BBECBE-A7F2-4E69-BE5B-25DEF9674203}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37BBECBE-A7F2-4E69-BE5B-25DEF9674203}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37BBECBE-A7F2-4E69-BE5B-25DEF9674203}.Release|Any CPU.Build.0 = Release|Any CPU
+		{230431BC-6CD8-42A3-8611-D26D92372C52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{230431BC-6CD8-42A3-8611-D26D92372C52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{230431BC-6CD8-42A3-8611-D26D92372C52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{230431BC-6CD8-42A3-8611-D26D92372C52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB23BF12-219F-4A5D-B2F5-F1B4E94B23C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB23BF12-219F-4A5D-B2F5-F1B4E94B23C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB23BF12-219F-4A5D-B2F5-F1B4E94B23C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB23BF12-219F-4A5D-B2F5-F1B4E94B23C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Validation.6.0.1304.0\lib\NET45
+	EndGlobalSection
+EndGlobal
