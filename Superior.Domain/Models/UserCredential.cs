@@ -42,7 +42,7 @@ namespace Superior.Domain.Models
 
             if (Salt == null)
             {
-                Salt = EncryptionUtility.Generate64ByteSalt();
+                Salt = EncryptionUtility.GenerateRandom64ByteSalt();
             }
 
             EncryptedPassword = EncryptionUtility.PBKDF2(Password, Salt);

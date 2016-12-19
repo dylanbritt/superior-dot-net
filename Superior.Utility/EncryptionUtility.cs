@@ -10,14 +10,17 @@ namespace Superior.Utility
         private const int PBKDF2_DEFAULT_ITERATION_COUNT = 262144;
         private const int PBKDF2_DEFAULT_DERIVED_KEY_LENGTH = 256;
 
-        public static byte[] Generate32ByteSalt()
+        // TODO: Unit Test
+        public static byte[] GenerateRandom32ByteSalt()
         {
             Random rnd = new Random();
             Byte[] b = new Byte[32];
             rnd.NextBytes(b);
             return b;
         }
-        public static byte[] Generate64ByteSalt()
+
+        // TODO: Unit Test
+        public static byte[] GenerateRandom64ByteSalt()
         {
             Random rnd = new Random();
             Byte[] b = new Byte[64];
@@ -25,6 +28,7 @@ namespace Superior.Utility
             return b;
         }
 
+        // TODO: Unit Test
         public static byte[] SHA512HashString(string str, byte[] salt = null)
         {
             var valueToHash = string.IsNullOrEmpty(str) ? string.Empty : str;
@@ -34,6 +38,7 @@ namespace Superior.Utility
             return csp.ComputeHash(Encoding.ASCII.GetBytes(valueToHash).Concat(salt).ToArray());
         }
 
+        // TODO: Unit Test
         public static byte[] PBKDF2(string password,
                                     byte[] salt = null,
                                     int iterationCount = PBKDF2_DEFAULT_ITERATION_COUNT,

@@ -27,7 +27,7 @@ namespace Superior.BusinessLogic
                 throw new ArgumentNullException(nameof(user.UserCredential));
 
             if (user.UserCredential.Salt == null)
-                user.UserCredential.Salt = EncryptionUtility.Generate32ByteSalt();
+                user.UserCredential.Salt = EncryptionUtility.GenerateRandom32ByteSalt();
 
             if (user.UserCredential.EncryptedPassword == null)
                 user.UserCredential.EncryptPassword();
