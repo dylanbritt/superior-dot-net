@@ -19,18 +19,21 @@ namespace Superior.Domain.Models
         public short LoginAttemptCount { get; set; }
 
         [Required]
-        public DateTime UtcDateTimeLastLoginAttempt { get; set; }
+        public DateTime? UtcDateTimeLastLoginAttempt { get; set; }
 
         public virtual User User { get; set; }
 
         public bool CanLogin()
         {
+            if (UtcDateTimeLastLoginAttempt == null)
+                throw new InvalidOperationException(nameof(UtcDateTimeLastLoginAttempt));
+
             // greater than 5 minutes
-            if ((DateTime.UtcNow - UtcDateTimeLastLoginAttempt).TotalSeconds > 300)
+            if ((DateTime.UtcNow - UtcDateTimeLastLoginAttempt)?.TotalSeconds > 300)
                 LoginAttemptCount = 0;
 
             return LoginAttemptCount < 5 ||
-                (DateTime.UtcNow - UtcDateTimeLastLoginAttempt).TotalSeconds > 30;
+                (DateTime.UtcNow - UtcDateTimeLastLoginAttempt)?.TotalSeconds > 30;
         }
 
         public bool AuthenticateUser(User anonymousUser)

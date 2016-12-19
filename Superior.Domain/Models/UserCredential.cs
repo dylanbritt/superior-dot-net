@@ -22,9 +22,11 @@ namespace Superior.Domain.Models
         public string Password { get; set; }
 
         [Required]
+        [StringLength(256)]
         public byte[] EncryptedPassword { get; set; }
 
         [Required]
+        [StringLength(64)]
         public byte[] Salt { get; set; }
 
         [Required]
@@ -40,21 +42,26 @@ namespace Superior.Domain.Models
 
             if (Salt == null)
             {
-                Salt = EncryptionUtility.Generate32ByteSalt();
+                Salt = EncryptionUtility.Generate64ByteSalt();
             }
 
-            EncryptedPassword = EncryptionUtility.SHA512HashString(Password, Salt);
+            EncryptedPassword = EncryptionUtility.PBKDF2(Password, Salt);
         }
 
         // TODO: Unit Test
         public bool IsEncryptedPasswordEqualTo(string password)
         {
+            if (password == null)
+                throw new ArgumentNullException(nameof(password));
             if (EncryptedPassword == null)
                 throw new InvalidOperationException(nameof(EncryptedPassword));
 
+            var otherCredential = new UserCredential { Password = password, Salt = this.Salt };
+            otherCredential.EncryptPassword();
+
             return
                 EncryptedPassword
-                    .SequenceEqual(EncryptionUtility.SHA512HashString(password, Salt));
+                    .SequenceEqual(otherCredential.EncryptedPassword);
         }
     }
 }

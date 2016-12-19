@@ -11,6 +11,7 @@ namespace _console
     {
         static void Main(string[] args)
         {
+
         }
 
         public static void CreateUser()
@@ -40,7 +41,7 @@ namespace _console
             SmtpClient client = new SmtpClient(server);
             // Credentials are necessary if the server requires the client 
             // to authenticate before it will send e-mail on the client's behalf.
-            client.UseDefaultCredentials = true;
+            client.Credentials = new System.Net.NetworkCredential("yourusername", "yourpassword");
 
             try
             {
