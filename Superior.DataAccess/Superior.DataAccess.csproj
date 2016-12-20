@@ -51,9 +51,9 @@
   <ItemGroup>
     <Compile Include="Configurations\UserConfiguration.cs" />
     <Compile Include="Context\SuperiorContext.cs" />
-    <Compile Include="Migrations\201612190054099_User and Dependencies.cs" />
-    <Compile Include="Migrations\201612190054099_User and Dependencies.Designer.cs">
-      <DependentUpon>201612190054099_User and Dependencies.cs</DependentUpon>
+    <Compile Include="Migrations\201612200535293_User &amp; Dependencies.cs" />
+    <Compile Include="Migrations\201612200535293_User &amp; Dependencies.Designer.cs">
+      <DependentUpon>201612200535293_User &amp; Dependencies.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,8 +71,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201612190054099_User and Dependencies.resx">
-      <DependentUpon>201612190054099_User and Dependencies.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201612200535293_User &amp; Dependencies.resx">
+      <DependentUpon>201612200535293_User &amp; Dependencies.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

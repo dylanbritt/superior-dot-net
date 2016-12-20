@@ -53,8 +53,8 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Config\AppSettings.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Config\ConnectionStrings.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

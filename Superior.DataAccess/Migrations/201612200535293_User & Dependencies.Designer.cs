@@ -7,13 +7,13 @@ namespace Superior.DataAccess.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class UserandDependencies : IMigrationMetadata
+    public sealed partial class UserDependencies : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(UserandDependencies));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(UserDependencies));
         
         string IMigrationMetadata.Id
         {
-            get { return "201612190054099_User and Dependencies"; }
+            get { return "201612200535293_User & Dependencies"; }
         }
         
         string IMigrationMetadata.Source

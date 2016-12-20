@@ -55,13 +55,13 @@
                     'UserCredential.Password': {
                         required: true,
                         maxlength: 64,
-                        regex: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).{8,}$/,
+                        //regex: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).{8,}$/
                     }
                 },
                 messages: {
                     'UserName': { },
                     'UserCredential.Password': {
-                        regex: "Bad password (at least one lower char, upper char, digit, and symbol."
+                        //regex: "Bad password (at least one lower char, upper char, digit, and symbol."
                     }
                 }
             });
